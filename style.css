@@ -1,0 +1,553 @@
+
+/* Основные настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d1b;
+    color: #e5e7eb;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Шапка */
+.header {
+    background: rgba(8, 13, 27, 0.95);
+    border-bottom: 1px solid #1e293b;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #38bdf8;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    gap: 25px;
+}
+
+.navigation a {
+    color: #cbd5e1;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #38bdf8;
+}
+
+.menu-button {
+    display: none;
+    background: transparent;
+    border: 1px solid #334155;
+    color: white;
+    font-size: 24px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Главный экран */
+.hero {
+    min-height: 570px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.small-title,
+.section-label {
+    color: #38bdf8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.description {
+    color: #94a3b8;
+    font-size: 17px;
+    max-width: 530px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.primary {
+    background: #38bdf8;
+    color: #08111f;
+}
+
+.primary:hover {
+    background: #7dd3fc;
+}
+
+.secondary {
+    border: 1px solid #334155;
+    color: #e2e8f0;
+}
+
+.secondary:hover {
+    background: #172238;
+}
+
+.status {
+    margin-top: 25px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #4ade80;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+/* Окно с кодом */
+.code-card {
+    background: #0f172a;
+    border: 1px solid #26364f;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.code-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #111c30;
+    border-bottom: 1px solid #26364f;
+}
+
+.code-top p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.window-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.window-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #64748b;
+}
+
+.window-dots span:first-child {
+    background: #f87171;
+}
+
+.window-dots span:nth-child(2) {
+    background: #fbbf24;
+}
+
+.window-dots span:nth-child(3) {
+    background: #4ade80;
+}
+
+.code-content {
+    padding: 25px 20px;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    overflow-x: auto;
+}
+
+.code-content p {
+    white-space: nowrap;
+}
+
+.indent {
+    padding-left: 20px;
+}
+
+.purple {
+    color: #c084fc;
+}
+
+.green {
+    color: #86efac;
+}
+
+.blue {
+    color: #38bdf8;
+}
+
+/* Общие настройки разделов */
+.section {
+    padding-top: 75px;
+    padding-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.section-description {
+    color: #94a3b8;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+/* Обо мне */
+.about-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.avatar {
+    min-width: 100px;
+    height: 100px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: #172c49;
+    color: #38bdf8;
+    font-family: Consolas, monospace;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.about-card h3 {
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+/* Карточки навыков */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 25px;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.html-icon {
+    background: #3b241d;
+    color: #fb923c;
+}
+
+.css-icon {
+    background: #172d4b;
+    color: #38bdf8;
+}
+
+.js-icon {
+    background: #39351b;
+    color: #fde047;
+    font-size: 17px;
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Карточки проектов */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-preview {
+    height: 160px;
+    padding: 15px;
+    background: #12233b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.preview-two {
+    background: #17263d;
+}
+
+.preview-three {
+    background: #102c36;
+}
+
+.preview-symbol {
+    align-self: center;
+    color: #38bdf8;
+    font-family: Consolas, monospace;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.preview-two .preview-symbol {
+    color: #c084fc;
+}
+
+.preview-three .preview-symbol {
+    color: #86efac;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.project-info p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    color: #7dd3fc;
+    background: #172c49;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* Контакты */
+.contact-card {
+    padding: 45px 25px;
+    margin: 40px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #102541, #10182c);
+    border: 1px solid #263d5c;
+    border-radius: 16px;
+}
+
+.contact-card h2 {
+    margin-bottom: 15px;
+}
+
+.contact-card > p:not(.section-label) {
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+.contact-card .contact-note {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* Подвал */
+.footer {
+    border-top: 1px solid #1e293b;
+    margin-top: 50px;
+}
+
+.footer-content {
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer p,
+.footer-content > a:last-child {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* Отображение на телефонах */
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navigation {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-button {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #0f172a;
+        border-bottom: 1px solid #26364f;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .hero {
+        padding-top: 55px;
+        padding-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .button {
+        text-align: center;
+    }
+
+    .section {
+        padding-top: 55px;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+
+    .about-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px 0;
+    }
+}
