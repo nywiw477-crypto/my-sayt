@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Моё портфолио | Frontend-разработчик</title>
+
+    <meta name="description" content="Личное портфолио начинающего программиста. Мои навыки, проекты и контакты.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container nav">
+            <a href="#home" class="logo">&lt;Dev/&gt;</a>
+
+            <button class="menu-button" id="menuButton"
+                aria-label="Открыть меню" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="navigation" id="navigation">
+                <a href="#home">Главная</a>
+                <a href="#about">Обо мне</a>
+                <a href="#skills">Навыки</a>
+                <a href="#projects">Проекты</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Первый экран -->
+        <section class="hero container" id="home">
+            <div class="hero-text">
+                <p class="small-title">ПРИВЕТ! Я НАЧИНАЮЩИЙ ПРОГРАММИСТ</p>
+
+                <h1>Привет, я <span>Frontend-разработчик</span></h1>
+
+                <p class="description">
+                    Я изучаю веб-разработку и создаю современные сайты.
+                    Мне нравится превращать идеи в работающие проекты
+                    и узнавать что-то новое каждый день.
+                </p>
+
+<div class="hero-buttons">
+    <a href="#projects" class="button primary">
+        Мои проекты
+    </a>
+
+    <a
+        href="https://t.me/webshtein"
+        class="button secondary"
+        target="_blank"
+        rel="noopener noreferrer">
+        Telegram
+    </a>
+
+    <a
+        href="https://www.instagram.com/musa1uu/"
+        class="button secondary"
+        target="_blank"
+        rel="noopener noreferrer">
+        Instagram
+    </a>
+</div>
+
+                <p class="status">
+                    <span class="status-dot"></span>
+                    Открыт новым знаниям и проектам
+                </p>
+            </div>
+
+            <div class="code-card">
+                <div class="code-top">
+                    <div class="window-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>hello-world.js</p>
+                </div>
+
+                <div class="code-content">
+                    <p><span class="purple">const</span> developer = {</p>
+                    <p class="indent">
+                        name: <span class="green">"Программист"</span>,
+                    </p>
+                    <p class="indent">
+                        skills: <span class="green">"HTML, CSS, JS"</span>,
+                    </p>
+                    <p class="indent">
+                        learning: <span class="green">true</span>
+                    </p>
+                    <p>};</p>
+                    <br>
+                    <p>
+                        <span class="blue">console</span>.log(
+                    </p>
+                    <p class="indent green">
+                        "Будущее начинается с кода!"
+                    </p>
+                    <p>);</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Обо мне -->
+        <section class="section container" id="about">
+            <p class="section-label">ЗНАКОМСТВО</p>
+            <h2>Обо мне</h2>
+
+            <div class="about-card">
+                <div class="avatar">&lt;/&gt;</div>
+
+                <div>
+                    <h3>Будущий разработчик</h3>
+
+                    <p>
+                        Привет! Меня зовут Улуг я в телеграмме @webshtein Я изучаю IT и программирование.
+                        Сейчас я знакомлюсь с HTML, CSS и JavaScript,
+                        учусь создавать сайты и работать с кодом.
+                    </p>
+
+                    <p>
+                        Моя цель — стать хорошим разработчиком,
+                        создавать полезные проекты и постоянно
+                        совершенствовать свои знания.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Навыки -->
+        <section class="section container" id="skills">
+            <p class="section-label">МОИ ЗНАНИЯ</p>
+            <h2>Мои навыки</h2>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-icon html-icon">5</div>
+                    <h3>HTML</h3>
+                    <p>Создаю структуру веб-страниц, заголовки,
+                    текст, ссылки и блоки.</p>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon css-icon">#</div>
+                    <h3>CSS</h3>
+                    <p>Оформляю страницы, выбираю цвета,
+                    создаю дизайн и адаптивную вёрстку.</p>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon js-icon">JS</div>
+                    <h3>JavaScript</h3>
+                    <p>Изучаю логику программирования
+                    и добавление интерактивности.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Проекты -->
+        <section class="section container" id="projects">
+            <p class="section-label">МОЯ ПРАКТИКА</p>
+            <h2>Мои проекты</h2>
+
+            <p class="section-description">
+                Здесь будут мои учебные работы и проекты,
+                которые я создам во время обучения.
+            </p>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-preview preview-one">
+                        <span>01 / HTML</span>
+                        <div class="preview-symbol">&lt;HTML&gt;</div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Моя первая страница</h3>
+                        <p>Простая веб-страница, созданная с помощью HTML.</p>
+                        <div class="tags">
+                            <span>HTML</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-preview preview-two">
+                        <span>02 / CSS</span>
+                        <div class="preview-symbol">DESIGN</div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Мой дизайн</h3>
+                        <p>Страница с современным оформлением и карточками.</p>
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-preview preview-three">
+                        <span>03 / JS</span>
+                        <div class="preview-symbol">{ JS }</div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Интерактивный проект</h3>
+                        <p>Проект, в котором JavaScript помогает
+                        реагировать на действия пользователя.</p>
+                        <div class="tags">
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#home" class="logo">&lt;Dev/&gt;</a>
+            <p>© <span id="year"></span> Моё портфолио</p>
+            <a href="#home">Наверх ↑</a>
+        <!-- Контакты -->
+        <section class="section container" id="contact">
+            <div class="contact-card">
+                <p class="section-label">ДАВАЙ ОБЩАТЬСЯ</p>
+
+                <h2>Связаться со мной</h2>
+
+                <p>
+                    Есть вопросы по IT или хочешь обсудить программирование?
+                    Напиши мне в социальных сетях!
+                </p>
+
+                <div class="social-links">
+                    <a
+                        class="button primary"
+                        href="https://t.me/webshtein"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Telegram: @webshtein
+                    </a>
+
+                    <a
+                        class="button secondary"
+                        href="https://www.instagram.com/musa1uu/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Instagram: @musa1uu
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
